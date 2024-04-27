@@ -11,7 +11,13 @@ def puntaje(dado1, dado2):
    # dado1 corresponde al valor de la tirada del primer dado
    # dado2 corresponde al valor de la tirada del segundo dado
    # devuelve el puntaje obtenido
-
+    if dado1 == 4:
+        return dado2
+    elif dado2 ==4:
+        return dado1
+    else:
+        return 0
+    '''
    if (dado1 == 4 and dado2 == 1) or (dado1==1 and dado2 == 4):
       return 1
    elif (dado1 == 4 and dado2 == 2) or (dado1==2 and dado2 == 4):
@@ -26,7 +32,7 @@ def puntaje(dado1, dado2):
       return 6
    else:
       return 0
-  
+  '''
 
 # Estrategia elegida por Juan
 def juan():
@@ -108,6 +114,7 @@ def jugar(imprimir):
          print(f"Maria Gano. Puntaje Juan: {puntaje_juan} , Puntaje Maria: {puntaje_maria}")
       return 1
 
+# Funcion para correr el juego N veces
 def repetir_juego(cantidad, imprimir):
    # cantidad corresponde a las veces que se repite el juego
    # imprimir corresponde a si se quiere que se impriman los resultados de los juegos individuales
